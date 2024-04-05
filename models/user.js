@@ -10,14 +10,6 @@ const userSchema = new schema({
         type: String,
         required: true
     },
-    gender:{
-        type: String,
-        required: true
-    },
-    image:{
-        type: String,
-        required: true
-    },
     username:{
         type: String,
         required: true
@@ -26,7 +18,7 @@ const userSchema = new schema({
         type: String,
         required: true
     },
-    token:{
+    password:{
         type: String,
         required: true
     },
