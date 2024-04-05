@@ -10,7 +10,9 @@ const handleLogin = async (req, res) => {
     if(!check){
         res.send({
             status: "error",
-            message: "Username is incorrect"
+            message: "Username is incorrect",
+            check,
+            username
         })
         return;
     }
@@ -26,6 +28,13 @@ const handleLogin = async (req, res) => {
             name: check.first_name,
             cart: check.cart.length,
             token
+        })
+        return;
+    }
+    else{
+        res.send({
+            status: "error",
+            message: "Password is incorrect"
         })
         return;
     }
